@@ -103,9 +103,9 @@ const { limit } = require('./database/menu/limit')
 // Load Vcard Contact
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + 'FN:NazwaðŸ–¤\n' // full name
+            + 'FN:BOTZERA\n' // full name
             + 'ORG:Owner Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=12542123926:+1 (254) 212-3926\n' // WhatsApp ID + phone number
+            + 'TEL;type=CELL;type=VOICE;waid=5511988528995:+55 (11) 98852-8995\n' // WhatsApp ID + phone number
             + 'END:VCARD'
 prefix = botPrefix
 blocked = []
@@ -385,21 +385,21 @@ async function starts() {
                         const q = args.join(' ')
                         
                         mess = {
-                                wait: '⌛ Sedang di Prosess ⌛',
-                                succsess: '✔️ Berhasil ✔️',
-                                levelon: '❬ ✔ ❭ *leveling telah aktif*',
+                                wait: '⌛ Processando ⌛',
+                                succsess: '✔️ Concluido ✔️',
+                                levelon: '❬ ✔ ❭ *leveling esta ativo*',
                                 levelnoton: `❬ X ❭  *disable leveling*`,
                                 levelnol: '*LEVEL KAKAK MASIH* 0 °-°',
                                 error: {
-                                	    stick: '[❗] Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker ❌',
-                                        Iv: '❌ Link tidak valid ❌',
+                                	    stick: '[❗] Falha, ocorreu um erro ao converter a imagem em um adesivo ❌',
+                                        Iv: '❌ Link invalido ❌',
                                 },
                         	only: {
-                        	        group: '[❗] Perintah ini hanya bisa di gunakan dalam group! ❌',
-                                        ownerG: `[❗] Perintah ini hanya bisa di gunakan oleh owner group! ❌`,
-                        	        admin: `[❗] Perintah ini hanya bisa di gunakan oleh admin group! ❌`,
-                                        Badmin: `[❗] Perintah ini hanya bisa di gunakan ketika bot menjadi admin! ❌`,
-                                        daftarB: `──「 BELUM REGISTER 」──\nHalo kak !\nKamu belum Register nih, register dulu yuk... \n\nCommand : ${prefix}register nama|umur\nContoh : ${prefix}register Nazwa|16`,
+                        	        group: '[❗] Este comando so pode ser usado em grupos! ❌',
+                                        ownerG: `[❗] Este comando só pode ser usado pelo grupo proprietário! ❌`,
+                        	        admin: `[❗] Este comando só pode ser usado por administradores de grupo! ❌`,
+                                        Badmin: `[❗] Este comando só pode ser usado quando o bot se torna administrador! ❌`,
+                                        daftarB: `──「 AINDA NÃO REGISTRADO 」──\nHalo kak !\nKamu belum Register nih, register dulu yuk... \n\nCommand : ${prefix}register nama|umur\nContoh : ${prefix}register Nazwa|16`,
                                 }
                         }
                 	const apakah = ['Ya','Tidak']
@@ -423,7 +423,7 @@ async function starts() {
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-                        const NomerOwner = '12542123926@s.whatsapp.net'
+                        const NomerOwner = '5511988528995@s.whatsapp.net'
                         const botLangs = languages
                         const isEventon = isGroup ? event.includes(from) : false
                         const isRegister = checkRegisteredUser(sender)
